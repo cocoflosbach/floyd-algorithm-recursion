@@ -24,10 +24,3 @@ def floyd_warshall_imp(distance_graph):
             #Any vallue that have sys.maxsize has no path
         print(distance_graph)
     floyd_warshall_imp(distance_graph)
-
-
-    def floyd_warshall():
-        for k in range(node_number):
-            for i in range(node_number):
-                for j in range(node_number):
-                    distance_graph[i,j]= min(distance_graph[i,j], distance_graph[i,k] + distance_graph[k,j])
