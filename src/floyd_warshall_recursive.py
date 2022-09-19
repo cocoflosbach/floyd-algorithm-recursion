@@ -1,9 +1,9 @@
-"""This is a program to create a recursive version
+"""This is a recursive version
 of the floyd_Warshall shortest paths algorithm."""
 
 
 
-def floyd_warshall_algo(distance_graph):
+def floyd_warshall_rec(distance_graph):
     """A recursive implementation of Floyd's algorithm"""
 
     #Define number of nodes in the given graph
@@ -57,3 +57,4 @@ def floyd_warshall_algo(distance_graph):
         [INF, INF, 0, 2],
         [INF, INF, INF, 0]
         ]
+        
