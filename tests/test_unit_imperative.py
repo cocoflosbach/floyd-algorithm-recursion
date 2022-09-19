@@ -2,9 +2,7 @@
 
 import unittest
 
-#Import the recursive function from the source folder
-from src.floyd_warshall_imperative import floyd_warshall_imp
-
+from floyd_imperative import floyd_warshall_imp
 #Import sample test data from testdata file
 from tests.test_sample_data import (graph1_node_input, graph1_expected_output,
                                     graph2_node_input, graph2_expected_output)
@@ -26,6 +24,7 @@ class TestFloydWarshallImperative(unittest.TestCase):
         self.assertEqual(floyd_warshall_imp(graph2_node_input), graph2_expected_output,
                             "Test Failed. Actual output does not match expected output")
 
+
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()
         
