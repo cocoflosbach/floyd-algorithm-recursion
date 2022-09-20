@@ -27,15 +27,16 @@ def floyd_warshall_rec(distance_graph):
                     elif k < 0:
                         return distance_graph[i][j]
 
+                    #If start_node [i] and end_node [j] is greater than or equal to
+                    #INF, return INF
                     elif [i][j] >= INF:
                         return INF
+                    #if there is a new shorter route through k, replace current route
                     else:
                         return min(fw_recursive_func(i, j, k),
                                 fw_recursive_func(i, k, k -1) + fw_recursive_func(i, j, k - 1))
                 distance_graph[i][j] = fw_recursive_func(i, j, k)
                 return distance_graph
-    print_dist_solution(distance_graph)
-
 
     def print_dist_solution(distance_graph):
         """Function to print out node values from recursive solution"""
@@ -48,13 +49,4 @@ def floyd_warshall_rec(distance_graph):
                 else:
                     print(distance_graph[i][j])
         print(distance_graph[i][j])
-
-
-    if __name__== "__main__":
-        distance_graph = [
-            [0, 7, INF, 8],
-        [INF, 0, 5, INF],
-        [INF, INF, 0, 2],
-        [INF, INF, INF, 0]
-        ]
-        
+    print_dist_solution(distance_graph)
