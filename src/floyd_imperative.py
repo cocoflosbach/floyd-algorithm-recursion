@@ -24,3 +24,14 @@ def floyd_warshall_imp(distance_graph):
             #Any vallue that have sys.maxsize has no path
         print(distance_graph)
     floyd_warshall_imp(distance_graph)
+
+
+
+# if __name__== "__main__":
+#     INF = 9999
+#     distance_graph = [
+#         [0, 7, INF, 8],
+#     [INF, 0, 5, INF],
+#     [INF, INF, 0, 2],
+#     [INF, INF, INF, 0]
+#     ]
